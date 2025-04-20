@@ -8,7 +8,8 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 
 [Example Next.js App on CodeSandbox](https://codesandbox.io/p/github/nathanhleung/slop-loader/main?import=true&embed=1&file=%2Fexamples%2Fnext%2Fapp%2FApp.ts)
 
-> [!WARNING]
+> ⚠️ **Warning**
+>
 > Probably only works in Next.js **with Webpack**. Untested in Turbopack and other Webpack contexts. Depending on how fast your model inference provider is, builds may be slow. See [Limitations](#limitations) below for more details.
 
 <img src="./slop-loader.gif" width="500px" alt="Screen recording">
@@ -126,7 +127,8 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 
 1. Import prompt files directly into your app.
 
-    > [!TIP]
+    > 💡 **Tip**
+    >
     > Add `@ts-expect-error slop-loader` above your imports if TypeScript is giving you import errors.
 
     ```tsx
@@ -198,21 +200,26 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 
 1. <a id="slop-dir"></a>Continue by either (a) editing the source prompt in your `<filename>__prompt.<ext>` file or (b) editing the generated files directly in the `.slop` directory created at your project's root.
 
-    > [!WARNING]
+    > ⚠️ **Warning**
+    >
     > Upon any change of either type, the Next.js dev server will reload the file. The rebuild may take a while due to inference time; the circular Next.js logo in the bottom left will animate if generation is in progress.
 
-    > [!TIP]
+    > 💡 **Tip**
+    >
     > By default, when you edit the source prompt, the previously-generated version of the file will be sent to the LLM to use as a base for the new generation. To start over, include the string `!!START OVER` somewhere in your prompt, or delete the content of the previously generated file in `.slop`. 
 
-    > [!WARNING]
+    > ⚠️ **Warning**
+    >
     > If you want to import a shared component into a generated file in `.slop`, imports should be relative to the location of the original source prompt file, not the generated file. This will probably show an error in your IDE; ignore it.
 
 1. When you're satisfied with your changes, commit the `.slop` directory to source control to save LLM outputs (and your edits, if applicable) for future builds.
 
-    > [!TIP]
+    > 💡 **Tip**
+    >
     > Or not, if you want a surprise every time you run `next build`.
 
-    > [!TIP]
+    > 💡 **Tip**
+    >
     > Running into weird build errors? Try deleting `.next` and restarting.
 
 ## How It Works
