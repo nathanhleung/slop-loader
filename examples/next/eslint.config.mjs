@@ -1,0 +1,24 @@
+import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    ignores: [
+      "**/*__prompt.js",
+      "**/*__prompt.jsx",
+      "**/*__prompt.ts",
+      "**/*__prompt.tsx",
+    ],
+  },
+];
+
+export default eslintConfig;

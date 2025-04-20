@@ -1,0 +1,1 @@
+A React wrapper for the `pre` tag which is responsive, i.e. tries to preserve formatting as best as possible but will wrap to respect max-width. Takes in two props `children` which will be the text to display and `className` which will be any classnames to add.
