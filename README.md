@@ -14,7 +14,7 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 >
 > Probably only works in Next.js **with Webpack**. Untested in Turbopack and other Webpack contexts. Depending on how fast your model inference provider is, builds may be slow. See [Limitations](#limitations) below for more details.
 
-<img src="https://slop-loader.vercel.app/slop-loader.gif" width="800px" alt="Screen recording">
+<img src="./examples/next/public/slop-loader.gif" width="800px" alt="Screen recording">
 
 ## Features
 
