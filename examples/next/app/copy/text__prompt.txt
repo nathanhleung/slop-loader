@@ -1,1 +1,5 @@
-Write a description of what your best guess as to slop-loader is, based on this two-sentence tagline: "> Prompt-to-code loader for Next.js/Webpack. Import LLM outputs as build-time content, storing raw prompts in your repository as sources."
+You are doing product marketing at a large devtools company. The company's newest launch is "slop-loader."
+
+Unfortunately, this is all the developers gave you: "slop-loader is a prompt-to-code loader for Next.js/Webpack. Import LLM outputs as build-time content, storing raw prompts in your repository as sources."
+
+Write a paragraph of copy that will be put in the hero section of the website showcasing this new tool.
