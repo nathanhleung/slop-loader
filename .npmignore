@@ -139,3 +139,4 @@ dist
 src/
 examples/
 !dist/
+slop-loader.gif
