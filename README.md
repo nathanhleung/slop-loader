@@ -260,7 +260,7 @@ The loader's `option`s supports using the LLM of your choice, as long as it's co
 
 LLMs are inundating our source repos with a tsunami of generated slop, making it difficult to tell what code is disposable or not.
 
-`slop-loader` lets developers store their carefully engineered LLM prompts as source files next to their other source code, and separates them from the generated slop that comes out. Store your **prompts as code**, and black-box the slop.
+`slop-loader` lets developers store their carefully engineered LLM prompts as source files next to their other source code, and separates them from the generated slop that comes out. **Store your prompts as code, and black-box the slop.**
 
 ## Limitations
 
