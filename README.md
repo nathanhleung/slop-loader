@@ -25,10 +25,10 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 
 ## Usage
 
-1. Install the loader.
+1. Install the loader and the AI SDK provider of your choice.
 
-    ```
-    npm install slop-loader
+    ```bash
+    npm install slop-loader @ai-sdk/openai # alternatively, `@openrouter/ai-sdk-provider`
     ```
 
 1. Update your Next.js app's config to enable the loader.
@@ -149,7 +149,19 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
       );
     }
     ```
-6. View generated outputs in the `.slop` directory.
+
+1. Run the Next.js dev server and visit http://localhost:3000.
+
+    ```bash
+    npm run dev
+    ```
+
+    > ⚠️ **Warning**
+    >
+    > On first load, the build may take a while.
+
+
+1. View generated outputs in the `.slop` directory.
 
     ```tsx
     // .slop/app/components/Background__meta-llama-llama-3-3-70b-instruct-free__baa00b2fe9684c8e.tsx
