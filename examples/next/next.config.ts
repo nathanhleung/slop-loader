@@ -11,7 +11,7 @@ if (!OPENROUTER_API_KEY) {
 const openrouter = createOpenRouter({
   apiKey: OPENROUTER_API_KEY,
 });
-const openrouterModel = openrouter("meta-llama/llama-3.3-70b-instruct:free");
+const openrouterModel = openrouter("meta-llama/llama-4-maverick:free");
 
 const nextConfig: NextConfig = {
   typescript: {
