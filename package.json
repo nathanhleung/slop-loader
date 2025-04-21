@@ -2,7 +2,7 @@
   "name": "slop-loader",
   "description": "Prompt-to-component loader for Next.js. Import LLM output as build-time content, storing only prompts in source.",
   "author": "nathanhleung",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [
     "webpack",
     "loader",
