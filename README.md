@@ -6,7 +6,7 @@
 
 No copy-pasting code, no AI noise polluting your sources. Just `import Header from "./Header__prompt.tsx"` and render `<Header />`.
 
-[Example Next.js App on CodeSandbox](https://codesandbox.io/p/github/nathanhleung/slop-loader/main?import=true&embed=1&file=%2Fexamples%2Fnext%2Fapp%2FApp.ts)
+[Live Example Next.js App](https://slop-loader.vercel.app/) | [Example Next.js App on CodeSandbox](https://codesandbox.io/p/github/nathanhleung/slop-loader/main?import=true&embed=1&file=%2Fexamples%2Fnext%2Fapp%2FApp.ts)
 
 > ⚠️ **Warning**
 >
