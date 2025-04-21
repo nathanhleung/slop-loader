@@ -242,6 +242,7 @@ LLMs are inundating our source repos with a tsunami of generated slop, making it
 * Only tested in Next.js Webpack contexts. Untested in Turbopack and other Webpack contexts.
 * Prompted files take on the order of 5–10 seconds each to generate. Large projects may take a while to build if not storing `.slop` directory in version control. Changes to prompts may take a while to be fully processed.
 * Since code is generated from prompts at build-time, there are no IDE type hints for `<filename>__prompt.<ext>` files.
+* `<filename>__prompt.tsx?` files don't pass type checking, so build-time type checking must be disabled for Next.js builds to work.
 * Generated code in `.slop` should import files with paths that are relative to the original `<filename>__prompt.<ext>` file location; IDE import hints will show an error even though the import will work at build-time.
 
 ## API
