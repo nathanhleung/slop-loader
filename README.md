@@ -1,5 +1,7 @@
 # slop-loader
 
+[![npm version](https://img.shields.io/npm/v/slop-loader)](https://npmjs.org/package/slop-loader)
+
 > Prompt-to-code loader for Next.js/Webpack. Import LLM outputs as build-time content, storing raw prompts in your repository as sources.
 
 `slop-loader` lets you **write natural-language prompt files** like `Header__prompt.tsx` as source files, and **get importable components generated at build-time** by the LLM of your choice.
