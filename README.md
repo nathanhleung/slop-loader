@@ -45,7 +45,8 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
     const nextConfig: NextConfig = {
       // ...
       typescript: {
-        // This is necessary for builds to work, if you're generating `.ts` or `.tsx` files
+        // This is necessary for builds to work, if you're generating `.ts` or `.tsx` files.
+        // However, this can be omitted in dev mode.
         ignoreBuildErrors: true,
       },
       webpack: (config) => {
@@ -213,9 +214,19 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 
 1. <a id="slop-dir"></a>Continue by either (a) editing the source prompt in your `<filename>__prompt.<ext>` file or (b) editing the generated files directly in the `.slop` directory created at your project's root.
 
-    > ⚠️ **Warning**
+    > ℹ️ **Note**
     >
-    > Upon any change of either type, the Next.js dev server will reload the file. The rebuild may take a while due to inference time; the circular Next.js logo in the bottom left will animate if generation is in progress.
+    > Upon any change of either source file or generated file, the Next.js dev server will reload the file. The rebuild may take a while due to inference time; the circular Next.js logo in the bottom left will animate if generation is in progress.
+
+    > ℹ️ **Note**
+    >
+    > If your component's Tailwind classes don't seem to be applying, you may need to explicitly tell Tailwind to consider `slop-loader`'s generated code as source files. If you're using the Next.js starter template, you can do this by adding the following line to the top of your `globals.css`:
+    >
+    > ```css
+    > @source "../.slop/";
+    > ``` 
+    >
+    > For more information, see the [Tailwind docs on explicitly registering sources](https://tailwindcss.com/docs/detecting-classes-in-source-files#explicitly-registering-sources).
 
     > 💡 **Tip**
     >
@@ -249,7 +260,7 @@ The loader's `option`s supports using the LLM of your choice, as long as it's co
 
 LLMs are inundating our source repos with a tsunami of generated slop, making it difficult to tell what code is disposable or not.
 
-`slop-loader` lets developers store their carefully engineered LLM prompts as source files next to their other source code, and separates them from the generated slop that comes out. Essentially, we're storing **prompts as code**.
+`slop-loader` lets developers store their carefully engineered LLM prompts as source files next to their other source code, and separates them from the generated slop that comes out. Store your **prompts as code**, and black-box the slop.
 
 ## Limitations
 

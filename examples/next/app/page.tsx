@@ -15,7 +15,7 @@ export default function Home() {
       <Header brand="slop-loader" />
       <Background />
       <div className="flex w-screen items-center justify-center pt-36 pb-24">
-        <div className="flex flex-col gap-8 max-w-1/2 text-black items-start">
+        <div className="flex flex-col gap-8 px-8 md:px-0 md:max-w-1/2 text-black items-start">
           <h1 className="text-6xl">slop-loader</h1>
           <pre className="text-sm wrap-normal whitespace-normal">{text}</pre>
           <video
