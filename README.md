@@ -29,7 +29,7 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
     npm install slop-loader
     ```
 
-1. Update your Next.js app's `webpack` config.
+1. Update your Next.js app's config to enable the loader.
 
     ```ts
     // next.config.ts
@@ -42,6 +42,10 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
 
     const nextConfig: NextConfig = {
       // ...
+      typescript: {
+        // This is necessary for builds to work, if you're generating `.ts` or `.tsx` files
+        ignoreBuildErrors: true,
+      },
       webpack: (config) => {
         config.module.rules.push({
           // This is the only supported import pattern for now; make sure your `test` matches exactly.
@@ -86,12 +90,7 @@ No copy-pasting code, no AI noise polluting your sources. Just `import Header fr
     const eslintConfig = [
       ...compat.extends("next/core-web-vitals", "next/typescript"),
       {
-        ignores: [
-          "**/*__prompt.js",
-          "**/*__prompt.jsx",
-          "**/*__prompt.ts",
-          "**/*__prompt.tsx",
-        ],
+        ignores: ["**/*__prompt.*"],
       },
     ];
     ```
